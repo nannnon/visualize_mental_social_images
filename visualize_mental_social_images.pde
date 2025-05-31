@@ -13,6 +13,7 @@ void draw()
   JSONArray json = getToots(g_min_id);
   if (json.size() == 0)
   {
+    saveFrame("frames/######.png");
     exit();
   }
   
