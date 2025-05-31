@@ -9,9 +9,10 @@ JSONArray getToots(long min_id)
   
   // mastodonのAPIを叩く回数が、1回/秒になるようにする
   int elapsedTime = millis() - g_previousTime;
-  if (elapsedTime < 1000)
+  final int WaitMSecs = 1100;
+  if (elapsedTime < WaitMSecs)
   {
-    delay(1000 - elapsedTime);
+    delay(WaitMSecs - elapsedTime);
   }
 
   // GET
