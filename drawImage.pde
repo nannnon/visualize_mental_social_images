@@ -34,7 +34,7 @@ void drawImage(String url, int fav)
     //}
     
     PImage img = loadImage(url);
-    float scaleFactor = min((fav + 1.0) / 64.0, 1);
+    float scaleFactor = min((fav + 1.0) / 48.0, 1);
     
     PosSize posSize = new PosSize();
     posSize.w = scaleFactor * img.width;
