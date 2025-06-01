@@ -3,7 +3,7 @@ long g_min_id = 114449330088992229L;
 void setup()
 {
   // X→ Y↓
-  size(2048, 2048, P2D);
+  size(4096, 4096, P2D);
   background(255);
 }
 
@@ -23,10 +23,14 @@ void draw()
     for (int i = 0; i < json.size(); ++i)
     {
       JSONObject item = json.getJSONObject(i);
-      int fav = item.getInt("favourites_count");
-      String created_at = item.getString("created_at");
-      println(created_at);
       
+      if (i == 0)
+      {
+        String created_at = item.getString("created_at");
+        println(created_at);
+      }
+      
+      int fav = item.getInt("favourites_count");
       JSONArray media = item.getJSONArray("media_attachments");
       for (int j = 0; j < media.size(); ++j)
       {

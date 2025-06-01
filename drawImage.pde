@@ -48,9 +48,7 @@ void drawImage(String url, int fav)
       
       if (!isHit(posSize))
       {
-        translate(posSize.x, posSize.y);
-        scale(scaleFactor);
-        image(img, 0, 0);
+        image(img, posSize.x, posSize.y, posSize.w, posSize.h);
         g_posSizes.add(posSize);
         break;
       }
@@ -60,6 +58,7 @@ void drawImage(String url, int fav)
     if (counter >= 1024)
     {
       println("counter >= 1024");
+      saveFrame("frames/######.png");
       exit();
     }
   }
