@@ -9,7 +9,7 @@ JSONArray getToots(long min_id)
   
   // mastodonのAPIを叩く回数を制限する
   int elapsedTime = millis() - g_previousTime;
-  final int WaitMSecs = 2000;
+  final int WaitMSecs = 10000;
   if (elapsedTime < WaitMSecs)
   {
     delay(WaitMSecs - elapsedTime);

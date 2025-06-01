@@ -26,10 +26,10 @@ boolean isHit(PosSize target)
 
 void drawImage(String url, int fav)
 {
-  if (fav < 10)
-  {
-    return;
-  }
+  //if (fav < 10)
+  //{
+  //  return;
+  //}
   
   PImage img = loadImage(url);
   float scaleFactor = min((fav + 1.0) / 16.0, 1);
